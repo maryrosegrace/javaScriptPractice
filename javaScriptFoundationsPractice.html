@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<script>
+
+// Add your code here
+
+function favoriteAnimal(animal) {
+  console.log(animal + " is my favorite animal!")
+}
+
+favoriteAnimal('Goat')
+
+// Creates a random two digit number string
+
+function createRandomWholeNumberMessage (){
+  const myNumber = Math.random();
+  let myNumberBetween1and100 = (myNumber*100);
+  let stringMyNumberBetween1and100 =myNumberBetween1and100.toString();
+  let myWholeNumber = stringMyNumberBetween1and100.slice (0,2);
+  console.log("Your random two digit number is: "+myWholeNumber);
+}
+
+createRandomWholeNumberMessage ();
+
+// Write a function called add7 that takes one number and returns that number + 7
+
+function add7(number) {
+  console.log ("If you add seven to your number you will have: "+(number+7));
+}
+
+add7(47);
+
+// Write a function called multiply that takes 2 numbers and returns their product.
+
+function multiply (number1, number2) {
+  let multiplicationAnswer=(number1*number2);
+  console.log ("If you multiply "+number1+" by "+number2+" the answer will be "+multiplicationAnswer);
+}
+
+multiply (3,4)
+
+// Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. 
+//Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+
+function capitalize (randomCaseString) {
+  let lowerCaseString = randomCaseString.toLowerCase();
+  let firstLetterToBeCapitalized = lowerCaseString.charAt (0);
+  let allOtherLetterAreLowerCase = lowerCaseString.slice (1);
+  let firstLetterIsNowCapital = firstLetterToBeCapitalized.toUpperCase ();
+  let stringWithTheFirstLetterCapitalized = firstLetterIsNowCapital+allOtherLetterAreLowerCase;
+  console.log (stringWithTheFirstLetterCapitalized)
+}
+
+capitalize ("type anyTHING is whatever CASE you WAnt.")
+
+// Write a function called lastLetter that takes a string and returns the very last letter of that string
+
+function lastLetter (aStringToStealTheLastLetterFrom) {
+  let lastLetterOfString = aStringToStealTheLastLetterFrom.charAt (aStringToStealTheLastLetterFrom.length-1);
+  console.log (lastLetterOfString);
+}
+
+lastLetter ("This is the string I will steal the last letter of, and that letter is M")
+
+
+// Don't edit the code below here!
+    
+  </script>
+</body>
+</html>
