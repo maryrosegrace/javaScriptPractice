@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+Check out the console to see the results of the game FizzBuzz!
+
+<script>
+
+//Fizz buzz is a group word game for children to teach them about division.
+//Players take turns to count incrementally, replacing any number divisible by three with the word "fizz"
+//and any number divisible by five with the word "buzz".
+
+//pseudo code steps
+//get imput number between 1 and 99
+//determine if imput number is divisable by 3 or 5
+//print fizz if 3, print buzz if 5
+//if neither add one to numbe imput and loop check again
+
+function gameFizzBuzz (numberImputForFizzBuzz) {
+
+    let badStartingNumberChoice
+
+// checks to see if number is smaller than 1
+    if (numberImputForFizzBuzz<1){
+        badStartingNumberChoice = "Your number is too small.";
+        console.log (badStartingNumberChoice);
+    }
+//checks to see if number in larger than 99    
+    else if (numberImputForFizzBuzz>100){
+        badStartingNumberChoice = "Your number is too large.";
+        console.log (badStartingNumberChoice);
+    }
+//checks to see in number is a whole number
+//add this later?
+
+//checks and prints Fizz and Buzz conditions
+    else {
+    for (numberImputForFizzBuzz=numberImputForFizzBuzz;numberImputForFizzBuzz<100;numberImputForFizzBuzz++){
+        let numberDividedBy3=(numberImputForFizzBuzz%3);
+        let numberDividedBy5=(numberImputForFizzBuzz%5);
+
+            if (numberDividedBy3==0&&numberDividedBy5==0){
+            console.log ("FizzBuzz");
+            }
+            else if (numberDividedBy3==0) {
+            console.log ("Fizz");
+            }
+            else if (numberDividedBy5==0) {
+            console.log ("Buzz");
+            } 
+            else {
+            console.log (numberImputForFizzBuzz); 
+            } 
+    }
+    }
+}
+
+gameFizzBuzz (26)
+
+</script>
+</body>
+</html>
